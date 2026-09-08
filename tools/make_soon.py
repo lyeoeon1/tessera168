@@ -217,7 +217,7 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/site.css?v=8">
+<link rel="stylesheet" href="{up}assets/site.css?v=9">
 <script src="{up}assets/site.js?v=1" defer></script>
 </head>
 <body>
@@ -266,7 +266,7 @@ TEMPLATE = """<!DOCTYPE html>
     <div class="cols">
       <div>
         <div class="sign"><img src="{up}assets/apps/{slug}.svg" alt="">{name}</div>
-        <p class="fine" style="margin-top:14px;max-width:30ch">{soon} — {year}</p>
+        <p class="fine" style="margin-top:14px;max-width:30ch">{soon}</p>
       </div>
       <div>
         <h4>{name}</h4>
@@ -370,7 +370,6 @@ def build(slug, lang):
         whath1a=what[0],
         whath1b=what[1],
         whath1c=what[2],
-        year="2026",
         langname=w["lang"],
         **{k: w[k] for k in ("soon", "eyebrow", "notify", "back", "note",
                              "contact", "other", "support")},

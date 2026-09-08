@@ -1057,3 +1057,6 @@ h2.ap-display {
 }
 
 .ap-nav .lang > summary:hover { color: var(--ink); background: #262a31; }
+
+/* A footnote under a card's body — the local-price note under the price. */
+.card .note { margin-top: 14px; }
