@@ -435,10 +435,18 @@ footer .sep { color: #4a4f58; }
   padding: 28px 0 0;
 }
 
-/* The wordmark stands on its own until the lab has a mark of its own. */
 .lab-top .brand {
   font-size: 22px;
   letter-spacing: -0.01em;
+}
+
+/* The lab's mark is a shape with a hole in it, not a tile: no rounded box
+   around it, and no background of its own. */
+.lab-top .brand .mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 0;
+  flex: none;
 }
 
 .lab-top .top-right { justify-content: flex-end; }
