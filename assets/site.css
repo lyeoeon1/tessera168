@@ -427,39 +427,18 @@ footer .sep { color: #4a4f58; }
    ========================================================================== */
 
 .lab-top {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 16px;
   padding: 28px 0 0;
 }
 
-.lab-top .where {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 14px;
-  color: var(--ink-soft);
-}
-
-.lab-top .where::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 2px solid var(--highlight);
-}
-
+/* The wordmark stands on its own until the lab has a mark of its own. */
 .lab-top .brand {
-  justify-content: center;
   font-size: 22px;
   letter-spacing: -0.01em;
-}
-
-.lab-top .brand .mark {
-  width: 30px;
-  height: 30px;
-  flex: none;
 }
 
 .lab-top .top-right { justify-content: flex-end; }
@@ -628,9 +607,8 @@ a.app-card:hover {
 }
 
 @media (max-width: 760px) {
-  .lab-top { grid-template-columns: 1fr; justify-items: start; gap: 14px; }
-  .lab-top .brand { justify-content: flex-start; }
-  .lab-top .top-right { justify-content: flex-start; }
+  .lab-top { gap: 14px; }
+  .lab-top .top-right { width: 100%; justify-content: flex-start; }
   .lab-hero { grid-template-columns: 1fr; gap: 40px; margin: 44px 0 44px; }
   .lab-hero h1 { max-width: none; }
   .lab-shelf { grid-template-columns: 1fr; }
@@ -982,3 +960,92 @@ h2.ap-display {
 .legal-top .langs { gap: 10px; }
 
 .legal-top .langs a[aria-current] { color: var(--ink); }
+
+/* ---------- the language switch ----------
+   One control instead of two links: the language you are reading, and a small
+   panel under it with both. Native <details>, so it works before any script
+   loads; site.js only closes it when you click elsewhere. */
+
+.lang {
+  position: relative;
+  font-size: 14px;
+}
+
+.lang > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #1d2026;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.lang > summary::-webkit-details-marker { display: none; }
+
+.lang > summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-right: 1.5px solid var(--ink-soft);
+  border-bottom: 1.5px solid var(--ink-soft);
+  transform: rotate(45deg);
+  transition: transform 120ms ease;
+}
+
+.lang[open] > summary::after { transform: rotate(-135deg); margin-top: 2px; }
+
+.lang > summary:hover { background: #262a31; }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  min-width: 158px;
+  padding: 6px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #1a1c21;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #d6d8db;
+  white-space: nowrap;
+}
+
+.lang-menu a:hover { background: #262a31; color: var(--ink); }
+
+.lang-menu a[aria-current] { color: var(--ink); font-weight: 600; }
+
+.lang-menu a[aria-current]::after {
+  content: "✓";
+  color: var(--highlight);
+  font-size: 13px;
+}
+
+/* Inside the app pages' floating pill the switch has no border of its own. */
+.ap-nav .lang > summary {
+  border-color: transparent;
+  background: transparent;
+  color: var(--ink-soft);
+  padding: 8px 12px;
+}
+
+.ap-nav .lang > summary:hover { color: var(--ink); background: #262a31; }

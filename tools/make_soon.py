@@ -217,7 +217,8 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/site.css?v=6">
+<link rel="stylesheet" href="{up}assets/site.css?v=7">
+<script src="{up}assets/site.js?v=1" defer></script>
 </head>
 <body>
 
@@ -226,7 +227,13 @@ TEMPLATE = """<!DOCTYPE html>
   <a class="here" href="./">{name}</a>
   <span class="bar"></span>
   <a href="{lab}">Ioniclabs&nbsp;↗</a>
-  <a href="{swap}">{langname}</a>
+  <details class="lang">
+    <summary>{langcode}</summary>
+    <div class="lang-menu">
+      <a href="{en_href}"{en_cur}>English</a>
+      <a href="{vi_href}"{vi_cur}>Tiếng Việt</a>
+    </div>
+  </details>
   <a class="cta" href="mailto:{mail}?subject={subject}">{notify}</a>
 </nav>
 
@@ -334,7 +341,15 @@ def build(slug, lang):
 
     what = [p.format(name=app["name"]) for p in WHAT[lang]]
 
+    en_href = "./" if lang == "en" else swap
+    vi_href = swap if lang == "en" else "./"
+
     html = TEMPLATE.format(
+        langcode=lang.upper(),
+        en_href=en_href,
+        vi_href=vi_href,
+        en_cur=' aria-current="page"' if lang == "en" else "",
+        vi_cur=' aria-current="page"' if lang == "vi" else "",
         lang=lang,
         slug=slug,
         up=up,
