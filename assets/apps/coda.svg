@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Coda">
+  <rect width="64" height="64" rx="16" fill="#78cfa8"/>
+  <g fill="#0d1a14">
+    <rect x="14" y="29" width="26" height="6" rx="3"/>
+    <circle cx="47" cy="32" r="4"/>
+    <rect x="14" y="17" width="36" height="5" rx="2.5" opacity=".35"/>
+    <rect x="14" y="42" width="20" height="5" rx="2.5" opacity=".35"/>
+  </g>
+</svg>
