@@ -12,7 +12,7 @@ plain static HTML, committed alongside the hand-written pages.
 from pathlib import Path
 
 WEB = Path(__file__).resolve().parent.parent
-MAIL = "hungtt2242@gmail.com"
+MAIL = "ioniclabs.support@gmail.com"
 
 APPS = {
     "coda": {
