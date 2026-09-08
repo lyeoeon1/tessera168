@@ -1,10 +1,24 @@
 # Tessera 168 — website
 
 Static pages served by GitHub Pages for the iPhone app **Tessera 168**
-(`com.tonghung.app168`).
+(`com.tonghung.app168`). No build step: what is in this repository is what is
+served.
 
-- `index.html` — landing page and support contact
-- `privacy/index.html` — the privacy policy, English and Vietnamese
+| Path | What it is |
+|---|---|
+| `index.html`, `vi/index.html` | landing and support page, English and Vietnamese |
+| `privacy/`, `vi/privacy/` | the privacy policy |
+| `terms/`, `vi/terms/` | the terms of use — the app's own EULA |
+| `assets/` | one stylesheet, the icon, the mascot, six screenshots |
 
-Live at <https://lyeoeon1.github.io/tessera168/>. The privacy URL used by the
-app and by App Store Connect is <https://lyeoeon1.github.io/tessera168/privacy/>.
+Live at <https://lyeoeon1.github.io/tessera168/>. The app and App Store Connect
+point at:
+
+- <https://lyeoeon1.github.io/tessera168/> — support URL
+- <https://lyeoeon1.github.io/tessera168/privacy/> — privacy policy (`Legal.privacy`)
+- <https://lyeoeon1.github.io/tessera168/terms/> — terms of use (`Legal.terms`)
+
+**These files are generated from the app repository**, in `web/`, with the two
+legal documents written in `docs/privacy-policy.md` and `docs/terms-of-use.md`.
+Edit them there and copy the folder here, or the app and the site start telling
+different stories.

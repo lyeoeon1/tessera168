@@ -1,0 +1,398 @@
+/* Tessera 168 — support & marketing site.
+   One stylesheet for every page. Layout follows the reference site the app's
+   owner picked: cream page, dark ink, one yellow highlight, grey cards,
+   black pill buttons. */
+
+:root {
+  --paper: #fdfef8;
+  --ink: #16182b;
+  --ink-soft: #55596b;
+  --highlight: #f7cb4b;
+  --card: #eeeeee;
+  --line: #e0e1da;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Lexend, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: inherit; }
+
+/* ---------- header ---------- */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 0 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: block;
+}
+
+.where {
+  color: var(--ink-soft);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.langs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.langs a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.langs a[aria-current] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #eceded;
+  color: var(--ink);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.mail:hover { background: #e3e4e5; }
+
+/* ---------- hero ---------- */
+
+h1 {
+  font-size: clamp(30px, 5.4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  max-width: 14ch;
+}
+
+h1 mark {
+  background: var(--highlight);
+  color: inherit;
+  padding: 0 0.12em;
+  border-radius: 4px;
+}
+
+.lede {
+  margin: 18px 0 0;
+  max-width: 56ch;
+  color: var(--ink-soft);
+  font-size: 18px;
+}
+
+h2 {
+  font-size: clamp(22px, 3.4vw, 30px);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  margin: 64px 0 22px;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ---------- cards ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 26px 26px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--plain {
+  background: transparent;
+  padding: 0;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.card-head .dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  flex: none;
+}
+
+.card p {
+  margin: 0;
+  color: #2c2f3d;
+}
+
+.card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: #2c2f3d;
+}
+
+.card li { margin: 4px 0; }
+
+.card .btn { margin-top: auto; }
+
+/* ---------- buttons ---------- */
+
+.btn {
+  align-self: center;
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #0c0c0c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover { background: #262626; }
+
+.btn--soft {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid #cfd0ca;
+}
+
+.btn--soft:hover { background: #efefe8; }
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.btn-row .btn { margin-top: 0; align-self: flex-start; }
+
+.note {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+
+/* ---------- the one big product block ---------- */
+
+.hero-app {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hero-app img.shot {
+  width: 100%;
+  max-width: 262px;
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- screenshots ---------- */
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.shots figure { margin: 0; }
+
+.shots img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.shots figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ---------- support ---------- */
+
+.support {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.support img {
+  width: 120px;
+  height: 120px;
+  flex: none;
+  display: block;
+}
+
+@media (max-width: 620px) {
+  .support { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .support img { width: 96px; height: 96px; }
+}
+
+/* ---------- price ---------- */
+
+.price, .card .price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 2px 0 10px;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.price small {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+/* ---------- prose (privacy and terms pages) ---------- */
+
+.h1-page { margin-top: 34px; }
+
+
+.prose {
+  max-width: 68ch;
+  margin-top: 26px;
+}
+
+.prose h2 {
+  font-size: 20px;
+  text-transform: none;
+  margin: 38px 0 10px;
+}
+
+.prose p, .prose li { color: #2c2f3d; }
+
+.prose ul { padding-left: 20px; }
+
+.prose .updated {
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+.prose th, .prose td {
+  border: 1px solid #d8d9d2;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th { background: #f2f2ea; font-weight: 600; }
+
+/* ---------- footer ---------- */
+
+footer {
+  margin-top: 84px;
+  border-top: 1px solid #cfd0ca;
+  padding: 22px 0 46px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+footer nav a { text-decoration: none; }
+
+footer nav a:hover { color: var(--ink); }
+
+footer .sep { color: #b9bab3; }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 860px) {
+  .shots { grid-template-columns: repeat(2, 1fr); }
+  .hero-app { grid-template-columns: 1fr; }
+  .hero-app img.shot { max-width: 260px; }
+}
+
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .where, .langs .sep { display: none; }
+  .grid { grid-template-columns: 1fr; }
+  h1 { max-width: none; }
+}

@@ -3,35 +3,141 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tessera 168</title>
-<meta name="description" content="Tessera 168 — an iPhone app for the 168 hours in your week.">
-<style>
-  :root { color-scheme: light dark; --ink: #16181d; --dim: #5d626e; --bg: #fbfbfc; --link: #2f5bd8; }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink: #e9eaee; --dim: #9aa0ad; --bg: #101216; --link: #8aa8ff; }
-  }
-  body {
-    margin: 0; background: var(--bg); color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 34rem; margin: 0 auto; padding: 5rem 1.25rem; }
-  h1 { font-size: 1.9rem; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
-  p { margin: 0 0 1rem; }
-  .dim { color: var(--dim); }
-  ul { list-style: none; padding: 0; margin: 2rem 0 0; }
-  li { margin-bottom: 0.6rem; }
-  a { color: var(--link); }
-</style>
+<title>Tessera 168 — your week, hour by hour</title>
+<meta name="description" content="Tessera 168 is a board of 168 squares — one for every hour of your week. Fill them in as they pass and see exactly where the week went. iPhone. No account, no tracking.">
+<link rel="icon" href="assets/icon.png">
+<meta property="og:title" content="Tessera 168 — your week, hour by hour">
+<meta property="og:description" content="A week is 168 hours. You only get it once.">
+<meta property="og:image" content="assets/icon.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=2">
 </head>
 <body>
-<main>
-  <h1>Tessera 168</h1>
-  <p>A week is 168 hours. This iPhone app gives each of them a purpose, and keeps every one of them on your own device.</p>
-  <p class="dim">No account, no analytics, no data collection — see the privacy policy.</p>
-  <ul>
-    <li><a href="./privacy/">Privacy Policy</a></li>
-    <li><a href="mailto:hungtt2242@gmail.com">Support: hungtt2242@gmail.com</a></li>
-  </ul>
-</main>
+<div class="wrap">
+
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/icon.png" alt="">Tessera&nbsp;168</a>
+    <div class="langs">
+      <span class="where">Made for iPhone</span>
+      <span class="sep">·</span>
+      <a href="./" aria-current="page">EN</a>
+      <a href="vi/">VI</a>
+    </div>
+  </header>
+
+  <a class="mail" href="mailto:hungtt2242@gmail.com?subject=Tessera%20168">hungtt2242@gmail.com ↗</a>
+
+  <div class="hero-app">
+    <div>
+      <h1>A week is 168 hours. You only get it <mark>once</mark>.</h1>
+      <p class="lede">Tessera 168 is a board of 168 squares — one square for every hour of
+      your week. Tap an hour, pick a purpose, and the hour takes that colour. By Sunday the
+      board is a picture of where your week actually went, not where you meant it to go.</p>
+      <p class="lede">It plays like a puzzle and it reads like a mirror.</p>
+      <div class="btn-row">
+        <a class="btn" href="mailto:hungtt2242@gmail.com?subject=Tessera%20168">Get in touch</a>
+        <a class="btn btn--soft" href="#screens">See the app</a>
+      </div>
+      <p class="note">Coming to the App Store. iPhone, iOS 17 and later. English and Vietnamese.</p>
+    </div>
+    <img class="shot" src="assets/shots/1-board.jpg" alt="The 168-hour board, one screen, filled in colour.">
+  </div>
+
+  <h2>What it does</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><span class="dot" style="background:#8f8bee"></span><h3>The board</h3></div>
+      <ul>
+        <li>All 168 hours on one screen, no scrolling to see your week</li>
+        <li>Nine purposes to start with — Sleep, Work, Commute, Food, Exercise, Family, Myself, Life upkeep, and the grey of hours you have not answered for yet</li>
+        <li>Add your own purposes, with your own names and colours</li>
+        <li>Grey squares are the point: they are the hours you cannot account for</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="dot" style="background:#6aa8f0"></span><h3>The day</h3></div>
+      <ul>
+        <li>Turn the board to a single day and read it as a timeline</li>
+        <li>Write a note on any hour, or say it out loud and let the phone write it down</li>
+        <li>Keep side tasks inside the hour they belong to, and tick them off there</li>
+        <li>Set a sound for an hour that comes back every week</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="dot" style="background:#f5c452"></span><h3>What it adds up to</h3></div>
+      <ul>
+        <li>How the week divided, hour by hour, ranked</li>
+        <li>The change against last week at the same point, so a Wednesday is compared to a Wednesday</li>
+        <li>Hours of sleep a night, and the other things a full week can say</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="dot" style="background:#78cfa8"></span><h3>Private by design</h3></div>
+      <ul>
+        <li>No account, no sign-in, no server of ours, no analytics, no advertising</li>
+        <li>Your week is one file on your iPhone</li>
+        <li>Voice notes are transcribed on the device itself</li>
+        <li>Export a copy or delete everything, permanently, from inside the app</li>
+      </ul>
+      <a class="btn" href="privacy/">Privacy policy</a>
+    </div>
+
+  </div>
+
+  <h2 id="screens">The app</h2>
+  <div class="shots">
+    <figure><img src="assets/shots/1-board.jpg" alt="The 168-hour board"><figcaption>The week, all of it</figcaption></figure>
+    <figure><img src="assets/shots/3-day.jpg" alt="One day as a timeline"><figcaption>One day, hour by hour</figcaption></figure>
+    <figure><img src="assets/shots/5-hour.jpg" alt="A note on one hour"><figcaption>A note on an hour</figcaption></figure>
+    <figure><img src="assets/shots/4-insights.jpg" alt="How the week divided"><figcaption>What it adds up to</figcaption></figure>
+  </div>
+
+  <h2>What it costs</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head"><h3>Free, and stays free</h3></div>
+      <p class="price">0₫ <small>no ads, no tracking, ever</small></p>
+      <p>The full 168-hour week, the eight built-in purposes, and written notes on any
+      hour.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>Tessera Pro</h3></div>
+      <p class="price">249.000₫ <small>a year, or one payment for life</small></p>
+      <p>Your own purposes with your own names and colours, voice notes written down for
+      you, symbol and icon board styles, sharing your week as an image, five alternate app
+      icons, and every feature added next. Shareable with your whole family.</p>
+    </div>
+
+  </div>
+
+  <h2>Support</h2>
+  <div class="card card--plain support">
+    <img src="assets/mascot.png" alt="">
+    <p>Questions, bugs, or an idea for the app — write to
+    <a href="mailto:hungtt2242@gmail.com?subject=Tessera%20168">hungtt2242@gmail.com</a>
+    and you will hear back from the person who made it.</p>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="privacy/">Privacy policy</a>
+      <span class="sep">|</span>
+      <a href="terms/">Terms of use</a>
+      <span class="sep">|</span>
+      <a href="mailto:hungtt2242@gmail.com?subject=Tessera%20168">Support</a>
+    </nav>
+    Copyright © 2026 Tessera 168. All rights reserved.
+  </footer>
+
+</div>
 </body>
 </html>
