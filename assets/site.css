@@ -959,3 +959,26 @@ h2.ap-display {
   color: var(--ink-soft);
   max-width: 40ch;
 }
+
+/* ---------- the legal pages' header ----------
+   Two rows and nothing else: the app it belongs to with the language switch
+   beside it, and the address to write to underneath. No section links — the
+   footer already carries those, and a page of terms should not offer a menu. */
+
+.legal-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 28px 0 0;
+}
+
+.legal-top-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.legal-top .langs { gap: 10px; }
+
+.legal-top .langs a[aria-current] { color: var(--ink); }
