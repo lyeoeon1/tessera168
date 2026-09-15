@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chính sách riêng tư — Tessera 168</title>
-<meta name="description" content="Tessera 168 không thu thập dữ liệu cá nhân nào. Không tài khoản, không máy chủ, không đo đạc, không quảng cáo.">
+<meta name="description" content="Tessera 168 không thu thập dữ liệu cá nhân nào. Không tài khoản, không máy chủ của chúng tôi, không đo đạc, không quảng cáo — tuần của bạn nằm trên máy và trong iCloud của chính bạn.">
 <link rel="icon" href="../../assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
 
   <h1 class="h1-page">Chính sách <mark>riêng tư</mark></h1>
   <div class="prose">
-    <p class="updated">Hiệu lực từ: 8 tháng 9, 2026</p>
+    <p class="updated">Hiệu lực từ: 16 tháng 9, 2026</p>
 
     <h2>1. Phạm vi</h2>
     <p>Chính sách này mô tả cách ứng dụng iOS Tessera 168 (“App”, “chúng tôi”) xử lý thông
@@ -44,8 +44,8 @@
     <ul>
       <li>App không thu thập, không truyền đi, không bán và không chia sẻ bất kỳ dữ liệu cá nhân nào.</li>
       <li>Không tài khoản, không đăng nhập, không máy chủ nào của chúng tôi, không đo đạc, không quảng cáo và không SDK bên thứ ba.</li>
-      <li>Mọi thứ bạn nhập vào đều ở lại trên máy bạn, do bạn kiểm soát. Bạn có thể xuất ra hoặc xoá sạch bất cứ lúc nào, ngay trong App.</li>
-      <li>Lưu lượng mạng duy nhất là giữa máy bạn và Apple, phục vụ việc mua trên App Store.</li>
+      <li>Mọi thứ bạn nhập vào đều ở lại trên máy bạn và, nếu bật iCloud, trong iCloud của chính bạn — do bạn kiểm soát và chúng tôi không đọc được. Bạn có thể xuất ra, tắt bản sao iCloud, hoặc xoá sạch bất cứ lúc nào, ngay trong App.</li>
+      <li>Lưu lượng mạng duy nhất là giữa máy bạn và Apple: việc mua trên App Store, và bản sao iCloud mô tả ở mục 4.</li>
     </ul>
 
     <h2>3. Những thông tin chúng tôi không thu thập</h2>
@@ -68,9 +68,19 @@
       <li>tuỳ chọn của bạn: giao diện, ngôn ngữ, âm thanh, chuyển động, phản hồi rung, biểu tượng app và cài đặt thông báo;</li>
       <li>một ghi nhận cục bộ về việc Tessera Pro đã mở khoá trên máy này hay chưa.</li>
     </ul>
-    <p>Tệp này không bao giờ rời khỏi máy bạn thông qua App. iOS bảo vệ nó bằng mã hoá ở mức
-    tệp và đưa nó vào bản sao lưu iCloud hoặc máy tính của chính bạn, theo đúng quy tắc áp
-    dụng cho dữ liệu của mọi app khác; chúng tôi không đọc được các bản sao lưu ấy.</p>
+    <p>iOS bảo vệ tệp này bằng mã hoá ở mức tệp và đưa nó vào bản sao lưu iCloud hoặc máy
+    tính của chính bạn, theo đúng quy tắc áp dụng cho dữ liệu của mọi app khác; chúng tôi
+    không đọc được các bản sao lưu ấy.</p>
+    <p><strong>Bản sao trên iCloud.</strong> Để xoá App hay đổi máy không làm mất ghi chép
+    của bạn, App còn giữ một bản nén của chính tệp này trong <strong>cơ sở dữ liệu riêng tư
+    thuộc tài khoản iCloud của bạn</strong> (CloudKit của Apple). Bản này được ghi tự động
+    sau khi bạn sửa, và được đọc lại khi bạn cài App lên một máy đăng nhập cùng Apple Account.
+    Nó do Apple lưu, dưới Apple Account của bạn, và chỉ bạn đọc được: đó không phải máy chủ
+    của chúng tôi, chúng tôi không truy cập được, và không phải dữ liệu chúng tôi thu thập.
+    Bạn có thể tắt bất cứ lúc nào trong <strong>Cài đặt › Riêng tư › Sao lưu iCloud</strong>;
+    tắt là bản sao bị xoá, và <strong>Xoá toàn bộ dữ liệu</strong> cũng xoá nó. Nếu iCloud
+    đang tắt trên máy, hoặc dung lượng iCloud của bạn đã đầy, App vẫn chạy bình thường trên
+    máy và nói rõ điều đó ngay dưới công tắc ấy.</p>
 
     <h2>5. Quyền truy cập</h2>
     <p>App chỉ xin quyền hệ thống đúng vào lúc một tính năng cần tới, không bao giờ xin ngay
@@ -111,7 +121,8 @@
     <h2>7. Dịch vụ bên thứ ba</h2>
     <p>App không tích hợp dịch vụ bên thứ ba nào. Bên ngoài duy nhất có liên quan tới hoạt
     động của App là Apple, thông qua các khung hệ thống iOS (StoreKit, UserNotifications,
-    Speech) chạy ngay trên máy bạn. Các liên kết bên trong App chỉ mở chính sách này, trang
+    Speech, CloudKit) chạy ngay trên máy bạn và, với bản sao iCloud, dịch vụ iCloud của Apple
+    dưới Apple Account của chính bạn. Các liên kết bên trong App chỉ mở chính sách này, trang
     hỗ trợ và điều khoản sử dụng.</p>
     <p>Trang web là các trang tĩnh. Nó không đặt cookie, không chạy đo đạc, không có đăng
     nhập. Nó có tải hai bộ chữ từ Google Fonts, nghĩa là trình duyệt của bạn lấy các tệp đó
@@ -120,19 +131,24 @@
     không nhận được ghi nhận nào về lượt truy cập của bạn.</p>
 
     <h2>8. An toàn</h2>
-    <p>Vì không có dữ liệu nào được truyền đi hay do chúng tôi lưu giữ, nên không có dữ liệu
-    phía máy chủ nào cần bảo vệ. Trên máy, App dựa vào cơ chế bảo vệ dữ liệu của iOS: vùng
-    chứa của nó được mã hoá khi nghỉ và các app khác không truy cập được.</p>
+    <p>Vì không có dữ liệu nào được truyền tới hay do chúng tôi lưu giữ, nên không có dữ liệu
+    phía máy chủ nào của chúng tôi cần bảo vệ. Trên máy, App dựa vào cơ chế bảo vệ dữ liệu
+    của iOS: vùng chứa của nó được mã hoá khi nghỉ và các app khác không truy cập được. Bản
+    sao iCloud được Apple bảo vệ theo cơ chế an toàn của Apple Account, cả khi truyền và khi
+    lưu, như mô tả trong tài liệu an toàn iCloud của Apple.</p>
 
     <h2>9. Lưu giữ và xoá dữ liệu</h2>
     <p>Dữ liệu của bạn nằm trên máy bạn chừng nào bạn còn giữ. Trong App,
     <strong>Cài đặt › Riêng tư</strong> có:</p>
     <ul>
-      <li><strong>Xuất dữ liệu</strong> — đưa toàn bộ tệp dữ liệu của bạn ra bảng chia sẻ của iOS để bạn giữ hoặc chuyển một bản sao;</li>
-      <li><strong>Xoá toàn bộ dữ liệu</strong> — xoá vĩnh viễn và ngay lập tức mọi giờ, ghi chú, việc cần làm và cài đặt khỏi máy.</li>
+      <li><strong>Sao lưu iCloud</strong> — công tắc của bản sao trong iCloud của chính bạn; tắt là bản sao bị xoá;</li>
+      <li><strong>Tệp dữ liệu › Xuất</strong> — đưa toàn bộ tệp dữ liệu của bạn ra bảng chia sẻ của iOS để bạn giữ hoặc chuyển một bản sao; <strong>Tệp dữ liệu › Khôi phục</strong> đọc lại một bản như thế;</li>
+      <li><strong>Xoá toàn bộ dữ liệu</strong> — xoá vĩnh viễn và ngay lập tức mọi giờ, ghi chú, việc cần làm và cài đặt khỏi máy, cùng với bản sao trên iCloud.</li>
     </ul>
-    <p>Xoá App khỏi máy cũng xoá luôn vùng chứa của nó. Không có gì để chúng tôi xoá theo
-    yêu cầu, bởi chúng tôi không giữ gì cả.</p>
+    <p>Xoá App khỏi máy là xoá vùng chứa của nó; bản sao iCloud, nếu đang bật, vẫn nằm trong
+    iCloud của bạn cho tới khi bạn tắt nó, xoá toàn bộ dữ liệu, hoặc gỡ dữ liệu của App trong
+    Cài đặt iOS › Apple Account › iCloud. Không có gì để chúng tôi xoá theo yêu cầu, bởi
+    chúng tôi không giữ gì cả.</p>
 
     <h2>10. Quyền riêng tư của trẻ em</h2>
     <p>App không hướng tới trẻ em dưới 13 tuổi và không cố ý thu thập thông tin cá nhân của
