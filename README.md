@@ -6,7 +6,7 @@ A static site, no build step. One stylesheet, one folder per page.
 |---|---|
 | `index.html`, `vi/index.html` | the Ioniclabs studio page — every app in the lab, one card each |
 | `apps/tessera168/`, `vi/apps/tessera168/` | Tessera 168's own site, the only shipped app |
-| `tessera168/` | the short link `ioniclabs.app/tessera168` — forwards to the app page in the reader's language |
+| `tessera168/` | the short link `ioniclabs.app/tessera168` — forwards to the English app page |
 | `CNAME` | the custom domain, `ioniclabs.app` |
 | `share/`, `vi/share/` | the promotion: a free year of Pro for a post with 100 likes — the web half of `ShareForProView` in the app |
 | `apps/coda/`, `apps/ferry/`, `apps/kiln/` (and their `vi/` twins) | the three apps that have not shipped; generated, see below |
@@ -69,8 +69,8 @@ must keep working: never delete the `tessera168` repo or rename it, and never
 remove the custom domain without putting the old paths back.
 
 `tessera168/` is the short link for bios and captions —
-`ioniclabs.app/tessera168` — and forwards to the app's page in the reader's
-language.
+`ioniclabs.app/tessera168` — and forwards to the English app page. The site
+opens in English from every entry point; Vietnamese is one tap away in the nav.
 
 ## The promotion pages
 

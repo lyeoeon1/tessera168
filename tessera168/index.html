@@ -12,13 +12,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ioniclabs.app/apps/tessera168/">
 <!-- The short link printed in bios and captions: ioniclabs.app/tessera168.
-     A reader whose phone is set to Vietnamese lands on the Vietnamese page,
-     everyone else on the English one. No script, no problem: the refresh
-     below still gets them there. -->
-<script>
-  var vi = (navigator.languages || [navigator.language || ""]).some(function (l) { return /^vi\b/i.test(l); });
-  location.replace(vi ? "../vi/apps/tessera168/" : "../apps/tessera168/");
-</script>
+     Always the English page — the site opens in English everywhere, and the
+     language switch in its nav takes a reader to Vietnamese. -->
+<script>location.replace("../apps/tessera168/");</script>
 <meta http-equiv="refresh" content="0; url=../apps/tessera168/">
 </head>
 <body>
