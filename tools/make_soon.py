@@ -212,8 +212,9 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="icon" href="{up}assets/apps/{slug}.svg">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{up}assets/apps/{slug}.svg">
+<meta property="og:image" content="https://ioniclabs.app/assets/apps/{slug}.svg">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ioniclabs.app/{vi}apps/{slug}/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
@@ -353,6 +354,7 @@ def build(slug, lang):
         lang=lang,
         slug=slug,
         up=up,
+        vi="vi/" if lang == "vi" else "",
         lab=lab,
         swap=swap,
         mail=MAIL,
