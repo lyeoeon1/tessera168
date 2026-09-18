@@ -217,7 +217,7 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}assets/site.css?v=9">
+<link rel="stylesheet" href="{up}assets/site.css?v=11">
 <script src="{up}assets/site.js?v=1" defer></script>
 </head>
 <body>
@@ -226,7 +226,7 @@ TEMPLATE = """<!DOCTYPE html>
   <img class="icon" src="{up}assets/apps/{slug}.svg" alt="">
   <a class="here" href="./">{name}</a>
   <span class="bar"></span>
-  <a href="{lab}">Ioniclabs&nbsp;↗</a>
+  <a class="hide-sm" href="{lab}">Ioniclabs&nbsp;↗</a>
   <details class="lang">
     <summary>{langcode}</summary>
     <div class="lang-menu">

@@ -21,6 +21,13 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+/* A phone must never be able to drag the page sideways. Every rule below is
+   meant to fit inside the viewport on its own — this is the net under them,
+   so one long word or a nowrap pill cannot turn the whole page into a
+   horizontal scroller. `clip`, not `hidden`: `hidden` makes the body a scroll
+   container and the sticky nav stops sticking. */
+html, body { overflow-x: clip; }
+
 body {
   margin: 0;
   background: var(--paper);
@@ -104,6 +111,13 @@ a { color: inherit; }
   font-size: 14px;
   white-space: nowrap;
   text-decoration: none;
+  max-width: 100%;
+}
+
+/* The address is one unbreakable word, wider than a 320 pt phone once the
+   pill's padding is round it. Let it break there rather than push the page. */
+@media (max-width: 380px) {
+  .mail { white-space: normal; overflow-wrap: anywhere; }
 }
 
 .mail:hover { background: #262a31; }
@@ -368,6 +382,9 @@ h3 {
   padding: 10px 12px;
   text-align: left;
   vertical-align: top;
+  /* A table sizes its columns from their longest word; without this one
+     long word in a cell widens the table past a small phone's screen. */
+  overflow-wrap: anywhere;
 }
 
 .prose th { background: #1a1c21; font-weight: 600; }
@@ -863,7 +880,9 @@ h2.ap-display {
 
 .ap-foot .cols {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
+  /* Five columns since the promotion page joined: the signature, then the
+     app, where to follow it, the legal pages and the lab. */
+  grid-template-columns: 1.4fr repeat(4, 1fr);
   gap: 32px;
 }
 
@@ -918,6 +937,13 @@ h2.ap-display {
   .ap-nav .hide-sm { display: none; }
   .ap-hero { padding-top: 46px; }
   .ap-stage { padding: 30px 18px 0; border-radius: 24px; }
+}
+
+/* The smallest phones (320 pt): the pill still holds a name, the language
+   and the call to action, so the divider goes and the button tightens. */
+@media (max-width: 380px) {
+  .ap-nav .bar { display: none; }
+  .ap-nav .cta { padding: 8px 12px; }
 }
 
 /* An app with no screenshots yet stands its icon in the same panel the phone

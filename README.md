@@ -6,6 +6,9 @@ A static site, no build step. One stylesheet, one folder per page.
 |---|---|
 | `index.html`, `vi/index.html` | the Ioniclabs studio page — every app in the lab, one card each |
 | `apps/tessera168/`, `vi/apps/tessera168/` | Tessera 168's own site, the only shipped app |
+| `tessera168/` | the short link `ioniclabs.app/tessera168` — forwards to the app page in the reader's language |
+| `CNAME` | the custom domain, `ioniclabs.app` |
+| `share/`, `vi/share/` | the promotion: a free year of Pro for a post with 100 likes — the web half of `ShareForProView` in the app |
 | `apps/coda/`, `apps/ferry/`, `apps/kiln/` (and their `vi/` twins) | the three apps that have not shipped; generated, see below |
 | `privacy/`, `vi/privacy/` | the privacy policy — the HTML twins of `../docs/privacy-policy.md` |
 | `terms/`, `vi/terms/` | the terms of use — the HTML twins of `../docs/terms-of-use.md` |
@@ -54,14 +57,36 @@ python3 -m http.server 8899   # then open http://localhost:8899/
 
 ## Publishing
 
-Every link is relative, so the site works from any sub-path. Publish the
-contents of this folder at the root of `https://lyeoeon1.github.io/tessera168/`.
+Every link is relative, so the site works from any sub-path. The contents of
+this folder are published by the `lyeoeon1/tessera168` repo (GitHub Pages,
+`main`, root) under the custom domain **`https://ioniclabs.app/`** — `CNAME`
+here carries the name, and the domain's DNS lives in Cloudflare (four A records
+to GitHub, grey cloud, never proxied, or the HTTPS certificate cannot renew).
+
+The old address `https://lyeoeon1.github.io/tessera168/…` redirects to the same
+path on `ioniclabs.app`. Build 10 has that old address baked in, so the redirect
+must keep working: never delete the `tessera168` repo or rename it, and never
+remove the custom domain without putting the old paths back.
+
+`tessera168/` is the short link for bios and captions —
+`ioniclabs.app/tessera168` — and forwards to the app's page in the reader's
+language.
+
+## The promotion pages
+
+`share/` and `vi/share/` say exactly what the app's own offer screen says —
+four steps, a caption to copy, and the small print as seven questions. The app
+links here (`Social.promo`), so if the offer changes, both pages and
+`Lang.swift` change in the same commit, the way the legal pages do.
+
+The four handles on those pages — `@tessera168` on Instagram, TikTok, X and
+Threads — are also written into the app. Instagram and Threads were registered
+2026-09-19; TikTok and X follow. Keep the promotion off the live site and
+`Social.offerLive` false until all four resolve. See
+`../docs/marketing/social-kit.md`.
 
 ## Before 1.0 goes live
 
-- **App Store Connect's Support URL** should move from the site root — now the
-  studio page — to `https://lyeoeon1.github.io/tessera168/apps/tessera168/`.
-  `../docs/appstore/listing.md` already says so; ASC does not yet.
 - The Tessera hero says "Coming to the App Store". Once the app is approved,
   swap that line for an App Store badge and link, in both languages, and swap
   the nav's "Get the app" mailto for the store link.
