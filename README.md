@@ -13,7 +13,7 @@ A static site, no build step. One stylesheet, one folder per page.
 | `privacy/`, `vi/privacy/` | the privacy policy — the HTML twins of `../docs/privacy-policy.md` |
 | `terms/`, `vi/terms/` | the terms of use — the HTML twins of `../docs/terms-of-use.md` |
 | `assets/site.css` | every rule for every page |
-| `assets/shots/` | Tessera screenshots, dark mode, resized to 900 px tall |
+| `assets/shots/` | Tessera screenshots, dark mode, English, 640 px wide — the same captures as the App Store set (`docs/appstore/raw-dark/en-board/hour/insights.png`, day = `.context/aurora/ready-dayledger.png`), week of 14–20 September |
 | `assets/apps/*.svg`, `assets/ioniclabs.svg` | the icons the studio page needs |
 | `tools/make_soon.py` | writes the six "coming soon" pages from one template |
 
