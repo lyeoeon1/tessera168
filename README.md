@@ -16,6 +16,9 @@ A static site, no build step. One stylesheet, one folder per page.
 | `assets/shots/` | Tessera screenshots, dark mode, English, 640 px wide — the same captures as the App Store set (`docs/appstore/raw-dark/en-board/hour/insights.png`, day = `.context/aurora/ready-dayledger.png`), week of 14–20 September |
 | `assets/apps/*.svg`, `assets/ioniclabs.svg` | the icons the studio page needs |
 | `tools/make_soon.py` | writes the six "coming soon" pages from one template |
+| `apps/suparrive/`, `vi/apps/suparrive/` | SupArrive's site — **generated** from `website/` in the SupArrive repo by `tools/ioniclabs_site.py` there; edit the text in that repo, not here. Partner pages are Vietnamese only. SupArrive has its own legal pages under its folder, because it runs a server, takes payment and has partners |
+| `suparrive/` | the short link `ioniclabs.app/suparrive` |
+| `assets/suparrive/` | SupArrive's icon and favicon |
 
 The two legal pages are the app's own documents, not Apple's: `Legal.privacy`
 and `Legal.terms` in `Lang.swift` point here, and the App Store description

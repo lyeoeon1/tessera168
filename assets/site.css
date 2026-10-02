@@ -1086,3 +1086,138 @@ h2.ap-display {
 
 /* A footnote under a card's body — the local-price note under the price. */
 .card .note { margin-top: 14px; }
+
+/* ==========================================================================
+   SupArrive (apps/suparrive/…, vi/apps/suparrive/…)
+
+   Generated from SupArrive's own website/ by tools/ioniclabs_site.py in the
+   SupArrive repo, so the text has a few shapes of its own the other apps do
+   not: callouts, numbered steps, wide tables and long documents with a
+   contents list. Everything here is prefixed sa- and touches no other page.
+   ========================================================================== */
+
+.sa .btn-row { justify-content: center; }
+.sa .btn-row .btn { align-self: center; }
+
+/* Body copy under a centred heading reads left-aligned, in one column. */
+.sa-body {
+  max-width: 760px;
+  margin: 34px auto 0;
+  text-align: left;
+}
+
+.sa-body p, .sa-body li { color: #d6d8db; }
+.sa-body h3 { margin: 32px 0 0; }
+.sa-body .btn-row { justify-content: flex-start; }
+.sa-body .btn-row .btn { align-self: flex-start; }
+
+.sa .card-head .sa-icon { font-size: 26px; line-height: 1; }
+.sa a.card { text-decoration: none; }
+.sa a.card:hover { background: #21242b; }
+.sa-more { margin-top: 14px; color: var(--ink-soft); font-size: 14px; font-weight: 600; }
+.sa-small { font-size: 15px; }
+.sa-muted, .card p.sa-muted { color: var(--ink-soft); }
+.sa .ap-faq { margin-top: 34px; }
+.sa .ap-faq ul { margin: 0 0 22px; color: #d6d8db; }
+
+.sa-note {
+  margin: 18px 0;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.sa-note p { margin: 0; }
+.sa-note > * + * { margin-top: 10px; }
+.sa-note.sa-warn { border-color: rgba(247, 203, 75, 0.45); }
+.sa-note.sa-danger { border-color: rgba(240, 106, 96, 0.55); }
+.sa-note.sa-ok { border-color: rgba(120, 207, 168, 0.5); }
+
+.sa-steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sa-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 18px 20px 18px 64px;
+  border-radius: 14px;
+  background: var(--card);
+}
+
+.sa-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--highlight);
+  color: #101114;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.sa-steps strong { display: block; margin-bottom: 2px; color: var(--ink); }
+
+.sa-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.sa-chips li { background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 15px; }
+
+/* Wide tables scroll inside their own box rather than widen the page. */
+.sa-table {
+  overflow-x: auto;
+  margin: 18px 0 24px;
+  text-align: left;
+}
+
+.sa-table table { min-width: 560px; }
+
+.sa-body .sa-table table, .ap-head > .sa-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+
+.sa-body th, .sa-body td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  color: #d6d8db;
+}
+
+.sa-body th { background: #1a1c21; color: var(--ink); font-weight: 600; }
+
+/* The long documents: a contents list that folds, and headings that stop
+   below the top edge when a contents link jumps to them. */
+.sa-doc h2 { scroll-margin-top: 24px; }
+.sa-doc h3 { font-size: 17px; margin: 24px 0 8px; }
+
+.sa-toc {
+  margin: 22px 0 8px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.sa-toc summary { cursor: pointer; font-weight: 600; }
+.sa-toc ol { margin: 12px 0 0; padding-left: 22px; }
+.sa-toc li { margin: 4px 0; }
+.sa-toc a { text-decoration: none; color: #d6d8db; }
+.sa-toc a:hover { color: var(--ink); }
+
+/* Five headings in the footer like Tessera's, so the same grid fits. */
+@media (max-width: 620px) {
+  .sa-steps li { padding-left: 58px; }
+}
