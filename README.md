@@ -19,6 +19,9 @@ A static site, no build step. One stylesheet, one folder per page.
 | `apps/suparrive/`, `vi/apps/suparrive/` | SupArrive's site — **generated** from `website/` in the SupArrive repo by `tools/ioniclabs_site.py` there; edit the text in that repo, not here. Partner pages are Vietnamese only. SupArrive has its own legal pages under its folder, because it runs a server, takes payment and has partners |
 | `suparrive/` | the short link `ioniclabs.app/suparrive` |
 | `assets/suparrive/` | SupArrive's icon and favicon |
+| `apps/arista/`, `vi/apps/arista/` | Arista's site with its own privacy policy and terms of use (`privacy/`, `terms/`), because it runs a server, sends pictures to AI services and sells subscriptions with credits — **generated** by `tools/make_arista.py`; edit the text there. The app (`AppInfo` in the Arista repo) and App Store Connect link to these URLs, so they must not move |
+| `arista/` | the short link `ioniclabs.app/arista` |
+| `assets/arista/` | Arista's icon and favicon |
 
 The two legal pages are the app's own documents, not Apple's: `Legal.privacy`
 and `Legal.terms` in `Lang.swift` point here, and the App Store description
