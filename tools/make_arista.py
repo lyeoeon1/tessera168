@@ -18,6 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MAIL = "ioniclabs.support@gmail.com"
 CSS = "site.css?v=12"
+# Bumped when the screenshots in assets/arista/shots/ change (1.0, no motion: 2026-10-19).
+SHOTS_V = 1
 EFFECTIVE = {"en": "19 October 2026", "vi": "19/10/2026"}
 
 T = {
@@ -31,6 +33,13 @@ T = {
         "soon": "Coming soon",
         "soon_p": "Coming to the App Store as Arista Studio. iPhone, in English and Vietnamese.",
         "inside": "What's <em>inside</em>",
+        "hero_alt": "Coloring an AI page of a snow globe in Arista.",
+        "screens": "Photo in, page out, <em>color</em> it",
+        "screens_sub": "Pick a photo and a style, color the page on your iPhone, then keep it on a board or behind the clock.",
+        "shots": [("1-home", "Home: a photo and a style", "A photo and a style"),
+                  ("2-styles", "The style picker with sample pages", "Dozens of styles"),
+                  ("4-focus", "The focus timer with a colored page behind the clock", "Your art behind the clock"),
+                  ("5-collections", "Collection templates", "Boards for what you color")],
         "cards": [
             ("📷", "Photo to page", "Take or pick a photo and get a page with clean outlines. The Original style is traced on your iPhone, free and offline; AI styles are drawn by an AI model."),
             ("🖍️", "Color it your way", "Fill, brushes, pencil and pen, palettes and layers of undo. Your artworks and collections stay on your phone."),
@@ -61,6 +70,13 @@ T = {
         "soon": "Sắp ra mắt",
         "soon_p": "Sắp có trên App Store với tên Arista Studio. iPhone, tiếng Anh và tiếng Việt.",
         "inside": "Có gì <em>bên trong</em>",
+        "hero_alt": "Đang tô một trang AI quả cầu tuyết trong Arista.",
+        "screens": "Chọn ảnh, ra trang, <em>tô</em> thôi",
+        "screens_sub": "Chọn ảnh và phong cách, tô trang ngay trên iPhone, rồi giữ lại trên bảng sưu tập hoặc phía sau đồng hồ.",
+        "shots": [("1-home", "Trang chủ: một bức ảnh và một phong cách", "Ảnh và phong cách"),
+                  ("2-styles", "Bảng chọn phong cách với trang mẫu", "Hàng chục phong cách"),
+                  ("4-focus", "Đồng hồ tập trung với tranh đã tô phía sau", "Tranh của bạn sau đồng hồ"),
+                  ("5-collections", "Mẫu bộ sưu tập", "Bảng cho những gì bạn tô")],
         "cards": [
             ("📷", "Ảnh thành trang", "Chụp hoặc chọn ảnh để có trang với nét viền rõ. Kiểu Original được vẽ ngay trên iPhone, miễn phí và không cần mạng; các kiểu AI do mô hình AI vẽ."),
             ("🖍️", "Tô theo ý bạn", "Đổ màu, cọ, bút chì, bút mực, bảng màu và hoàn tác nhiều bước. Tác phẩm và bộ sưu tập nằm trên điện thoại của bạn."),
@@ -329,6 +345,9 @@ def app_page(lang):
     cards = "\n".join(
         f'<div class="card"><div class="card-head"><span aria-hidden="true" class="sa-icon">{i}</span><h3>{h}</h3></div><p>{p}</p></div>'
         for i, h, p in t["cards"])
+    shots = "\n".join(
+        f'      <figure><img src="{up}assets/arista/shots/{n}.jpg?v={SHOTS_V}" alt="{alt}" loading="lazy"><figcaption>{cap}</figcaption></figure>'
+        for n, alt, cap in t["shots"])
     og = "apps/arista/" if lang == "en" else "vi/apps/arista/"
     return head(t, t["title"], t["desc"], up, og) + f"""<nav class="ap-nav">
   <img class="icon" src="{up}assets/arista/icon.png" alt="">
@@ -346,10 +365,17 @@ def app_page(lang):
     <span class="ap-eyebrow">{t['eyebrow']}</span>
     <h1 class="ap-display">{t['display']}</h1>
     <p class="ap-sub">{t['sub']}</p>
-    <div class="ap-stage ap-stage--art">
-      <img src="{up}assets/arista/icon.png" alt="">
-      <span class="tag">{t['soon']}</span>
-      <p>{t['soon_p']}</p>
+    <p class="ap-sub"><span class="tag tag--soon">{t['soon']}</span>&nbsp; {t['soon_p']}</p>
+    <div class="ap-stage">
+      <img src="{up}assets/arista/shots/3-coloring.jpg?v={SHOTS_V}" alt="{t['hero_alt']}">
+    </div>
+  </section>
+
+  <section id="screens" class="ap-head">
+    <h2 class="ap-display">{t['screens']}</h2>
+    <p class="ap-sub">{t['screens_sub']}</p>
+    <div class="ap-row">
+{shots}
     </div>
   </section>
 
